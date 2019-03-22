@@ -1,0 +1,18 @@
+# Configure this Discovery Server
+spring:
+  application:
+    name: proxy-service
+
+server:
+  port: 8762   # HTTP (Tomcat) port
+
+  
+zuul:
+  #ignoredServices: '*'
+  routes:
+    susalud-ae:
+      path: /api/**
+      serviceId: susalud-ae
+      stripPrefix: false
+      url: http://localhost:2223
+
