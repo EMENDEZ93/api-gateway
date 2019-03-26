@@ -9,6 +9,14 @@ services:
       - example=my value  
     volumes:
       - javatmp:/tmp
+    networks:
+      - susalud_
+
+networks:
+  susalud_:
+    external:
+      name: susalud_network    
+    
     
 volumes:
   # default dir /var/lib/docker/volumes

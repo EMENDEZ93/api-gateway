@@ -8,15 +8,14 @@ server:
 
   
 zuul:
-  #ignoredServices: '*'
+  ignoredServices: '*'
   routes:
     susalud-ae:
       path: /api/**
       serviceId: susalud-ae
       stripPrefix: false
       url: http://localhost:2223
-     
-     
+    
 #    helloworld:
 #      path: /helloworld
 #      serviceId: helloworld
